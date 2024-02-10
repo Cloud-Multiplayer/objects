@@ -1,32 +1,17 @@
-var userChoice, randomNumber, computerChoice;
-userChoice = prompt("heads or tails");
-randomNumber = Math.round(Math.random());
-if(randomNumber == 0)
-{
-    computerChoice = "heads";
+for (let i = 1000; i >= 0; i -= 2) {
+    console.log(i);
 }
-else{
-    computerChoice = "tails";
+for (let i = 0; i <= 10000; i++) {
+    if (i === 2500) {
+        alert("A quarter of the way there!");
+    } else if (i === 5000) {
+        alert("Halfway there!");
+    } else if (i === 10000) {
+        alert("The loop is done!");
+    }
 }
-if(computerChoice == userChoice)
-{
-    alert("You guessed right! The coin flip landed on " + computerChoice);
-}
-else
-{
-    alert("Sorry, the coin flip landed on " + computerChoice);
-}
+var favoriteShows = ["The Mandalorian", "WandaVision", "Daredevil", "Masters of the Air", "For All Mankind"];
 
-
-var birthYear;
-birthYear = prompt("What year were you born?");
-var currentYear = 2024;
-var age = currentYear - birthYear;
-
-if (age > 21) {
-    alert("You are old enough to drink in the US");
-} else if (age === 21) {
-    alert("You are old enough to drink in the US...barely");
-} else {
-    alert("Sorry, you are not old enough to drink in the US");
+for (let i = 0; i < favoriteShows.length; i++) {
+    console.log("My #" + (i+1) + " favorite TV show is " + favoriteShows[i]);
 }
