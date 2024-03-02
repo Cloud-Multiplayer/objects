@@ -1,45 +1,20 @@
-var wins = 0;
-var losses = 0;
-var ties = 0;
 
+let main = document.querySelector('main');
 
-var rounds = parseInt(prompt("How many rounds do you want to play?"));
+let joke1 = 'A guy walks into a bar and asks for 1.4 root beers. The bartender says “I’ll have to charge you extra, that’s a root beer float”. The guy says “In that case, better make it a double.';
+let joke2 = "Knock, knock. Who’s There? Very long pause… “Java.”";
+let joke3 = "Programming is 10% writing code and 90% understanding why it’s not working";
 
-for (let i = 0; i < rounds; i++) {
-    var userChoice = prompt("Enter r, p, or s (for rock, paper, or scissors)");
+let template = `
+  <h1>My Jokes</h1>
+  <ul>
+    <li>${joke1}</li>
+    <li>${joke2}</li>
+    <li>${joke3}</li>
+  </ul>
+`;
 
-    var computerChoice = Math.floor(Math.random() * 3);
-    var computerMove;
-    if(computerChoice === 0)
-    {
-        computerMove = "r";
-    }
-    else if (computerChoice === 1)
-    {
-        computerMove = "p";
-    }
-    else
-    {
-        computerMove = "s";
-    }
-
-    if (userChoice === computerMove) 
-    {
-        ties++;
-        alert("It's a tie!");
-    } else if (
-        (userChoice === "r" && computerMove === "s") ||
-        (userChoice === "p" && computerMove === "r") ||
-        (userChoice === "s" && computerMove === "p")
-    ) 
-    {
-        wins++;
-        alert("You won!");
-    } else 
-    {
-        losses++;
-        alert("You lost!");
-    }
-}
-
-alert("Game Over! You won " + wins + " times, tied " + ties + " times, and lost " + losses + " times.");
+main.innerHTML = template;
+let para = document.createElement('p');
+para.textContent = "That's all folks!";
+document.body.appendChild(para);
